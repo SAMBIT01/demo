@@ -52,6 +52,7 @@ img.avatar {
 }
 
 span.psw {
+  
   float: right;
   padding-top: 16px;
 }
@@ -66,6 +67,23 @@ span.psw {
      width: 100%;
   }
 }
+table, th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+table {
+  width: 50%;
+}
+td {
+  text-align: center;
+}
+table {
+  border-spacing: 15px;
+}
+td {
+  background-color: #04AA6D;
+  color: blue;
+}
 </style>
 </head>
 <body>
@@ -78,6 +96,8 @@ span.psw {
   </div>
 
   <div class="container">
+   
+
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
 
@@ -96,6 +116,7 @@ span.psw {
       
       </textarea>
     <span class="psw">Forgot <a href="#">password?</a></span>
+
   </div>
 </form>
 <div *ngIf="showMessageParam; then trueParam ;     else  otherParam     ">
@@ -113,6 +134,19 @@ span.psw {
       <div *ngSwitchCase ="4"> The value is 4.</div>
       <div *ngSwitchDefault> This is my default value </div>
 </div>
+<table class = "table" >
+  
+<tr *ngFor="let sd of students" >
+ 
+    <td>
+      {{sd.rollNo}}
+    </td>
+    <td>
+      {{sd.name}}
+    </td>
+  </tr>
+
+</table>
 </body>
 </html>
 
