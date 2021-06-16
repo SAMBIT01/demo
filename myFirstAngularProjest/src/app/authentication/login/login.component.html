@@ -1,152 +1,156 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+         body {font-family: Arial, Helvetica, sans-serif;}
+         form {border: 3px solid #f1f1f1;}
+         input[type=text], input[type=password] {
+               width: 50%;
+               padding: 12px 20px;
+               margin: 2px 0;
+               display: inline-block;
+               border: 1px solid #ccc;
+               border-radius: 4px;
+               box-sizing: border-box;
+         }
+         .colourCode{
+         width :400px;
+         padding: 12px 20px;
+         margin: auto;
+         border: 3px solid #73AD21;
+         }
+         button {
+         background-color: #04AA6D;
+         color: white;
+         padding: 14px 20px;
+         margin: 8px 0;
+         border: none;
+         cursor: pointer;
+         width: 100%;
+         }
+         button:hover {
+         opacity: 0.8;
+         }
+         .cancelbtn {
+         width: auto;
+         padding: 10px 18px;
+         background-color: #f44336;
+         }
+         .imgcontainer {
+         text-align: center;
+         margin: 24px 0 12px 0;
+         }
+         img.avatar {
+         width: 40%;
+         border-radius: 50%;
+         }
+         .container {
+         padding: 16px;
+         text-align:center;
+         }
+         span.psw {
+         float: right;
+         padding-top: 16px;
+         }
+         /* Change styles for span and cancel button on extra small screens */
+         @media screen and (max-width: 300px) {
+         span.psw {
+         display: block;
+         float: none;
+         }
+         .cancelbtn {
+         width: 100%;
+         }
+         }
+         table, th, td {
+         border: 1px solid black;
+         padding: 5px;
+         }
+         table {
+         width: 50%;
+         }
+         td {
+         text-align: center;
+         }
+         table {
+         border-spacing: 15px;
+         }
+         td {
+         background-color: #04AA6D;
+         color: blue;
+         }
+         input[type=submit] {
+         width: 20%;
+         background-color: #4CAF50;
+         color: white;
+         padding: 14px 20px;
+         margin: 8px 0;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+      }
+      input[type=submit]:hover {
+      background-color: #45a049;
+      }
+      .align{
+         text-align: left;
+      }
 
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
 
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-table, th, td {
-  border: 1px solid black;
-  padding: 5px;
-}
-table {
-  width: 50%;
-}
-td {
-  text-align: center;
-}
-table {
-  border-spacing: 15px;
-}
-td {
-  background-color: #04AA6D;
-  color: blue;
-}
-</style>
-</head>
-<body>
-
-<h2>Login Form</h2>
-
-<form action="/action_page.php" method="post">
-  <div class="imgcontainer">
-    <img src="" alt="Avatar" class="avatar">
-  </div>
-
-  <div class="container">
-   
-
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button"  (click)="showMessage()" class="cancelbtn">Cancel</button><br><br><br>
-    <textarea id="textId" name="textId" rows="1" cols="4">
-      
-      </textarea>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-
-  </div>
-</form>
-<div *ngIf="showMessageParam; then trueParam ;     else  otherParam     ">
-  <!-- This is true param   button message -->
-</div>
-
-<ng-template #trueParam>This is true param  cancel button message  </ng-template> 
-<ng-template #otherParam>The message for false param cancel button  </ng-template>
-
-<!-- ngSwitch implimentaion -->
-<div [ngSwitch]="value">
-      <div *ngSwitchCase ="1"> The value is 1.</div>
-      <div *ngSwitchCase ="2"> The value is 2.</div>
-      <div *ngSwitchCase ="3"> The value is 3.</div>
-      <div *ngSwitchCase ="4"> The value is 4.</div>
-      <div *ngSwitchDefault> This is my default value </div>
-</div>
-<table class = "table" >
-  
-<tr *ngFor="let sd of students" >
- 
-    <td>
-      {{sd.rollNo}}
-    </td>
-    <td>
-      {{sd.name}}
-    </td>
-  </tr>
-
-</table>
-</body>
+      </style>
+   </head>
+   <body style="background-color:grey;">
+      <h2 align="center">Login Form</h2>
+      <form action="/action_page.php" method="post">
+         <div class="imgcontainer">
+            <img src="" alt="Avatar" class="avatar">
+         </div>
+         <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text"  placeholder="Enter Username" name="uname" required><br>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required><br>
+           
+            <input type="submit" value="login"><br>
+            
+            <label  >
+            <input type="checkbox" checked="checked" name="remember">Remember me
+            </label><br>
+            <input type="reset" value="Reset">
+         </div>
+         <div class="container" style="background-color:#f1f1f1">
+            <input type="text" #titleInput /><br>
+            <button type="button"  (click)="showMessage(titleInput.value )" class="cancelbtn">Cancel</button><br><br><br>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+         </div>
+      </form>
+      <div [ngClass]="[classname1,classname2]"  >This is my ngClass tuitorial</div>
+      <div *ngIf="showMessageParam; then trueParam ;     else  otherParam     ">
+         <!-- This is true param   button message -->
+      </div>
+      <ng-template #trueParam>This is true param  cancel button message  </ng-template>
+      <ng-template #otherParam>The message for false param cancel button  </ng-template>
+      <!-- ngSwitch implimentaion -->
+      <div [ngSwitch]="value">
+         <div *ngSwitchCase ="1"> The value is 1.</div>
+         <div *ngSwitchCase ="2"> The value is 2.</div>
+         <div *ngSwitchCase ="3"> The value is 3.</div>
+         <div *ngSwitchCase ="4"> The value is 4.</div>
+         <div *ngSwitchDefault> This is my default value </div>
+      </div>
+      <div  [ngStyle]="{'background-color':myBgColour, 'color': myColourName}" class ="colourCode" >  This is my colour </div>
+      <table class = "table" >
+         <tr *ngFor="let sd of students" >
+            <td>
+               {{sd.rollNo}}
+            </td>
+            <td>
+               {{sd.name}}
+            </td>
+         </tr>
+      </table>
+      <div  [ngClass]="[classname1,classname2]" >=====================================data binding===============================</div>
+      <div align="center">{{myName}}{{users.name}} {{myAddress}}{{users.dist}}</div>
+   </body>
 </html>
-

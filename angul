@@ -1,0 +1,103 @@
+1. Angular is a client side technology.
+2. How to connevct client side with server side and data base.
+3. Client side technology : Html, Angular, Ext js,
+4. Server side technology. Java , .net, 
+5. Request: When the client side sends data to server side with some request url and  parameter its called as request.
+6. Response: When the server side received the request and process with itself or collect the data from database and return with some data
+  to client side its known as resonse.
+
+7. Client side technology.
+ (Html, angular) . Html is a markup langualge. Angular is a UI technology.
+
+8. History of angular.
+
+   1. Initially the websites are mainly designed by HTML. As its more descriptive the devlopers are facing issues while devloping sites.
+   2. Java script: We can call JS as a framework of HTML. Its object oriented.
+   3. Jquery : Its a framework of   JS and HTML.
+   4. In 2015 Angular js came to the market. Its a framework of Html, JS, Jquery.(Version 1.x) 
+   5. Angular 2.x  (2016),Angular 4.x , 5,6,7,8 , 9, 10
+
+9. Its a product of GOOGLE.
+10. Its open source.
+
+11. Node js . Environment (Packages , Modules ,Librarry files). Type script. 
+    Check in cmd "node -v "  to check the version of the node.
+12. Node package module need to be installed.  
+    open https://angular.io/cli  , copy command to install node package module.
+    (npm install -g @angular/cli)
+    Check  version (ng --version)
+13. Visual Studio code. (Its a tool). where we will import our code and write .
+14. Create a new APP (project) in angular.
+    "ng new  MyFirstAngularProject"
+15. To run the project , Go to  the project location in cmd and type "ng serve"
+16-ng serve converts  typescript to java script internally 
+
+Folder Overview
+------------------
+
+16. SRC -> This is the main application folder of angular . In  side the src folder the actual logic of project defined. 
+
+   -  In side the src folder  The modules , components , images, html files, css files,  .ts files are present. 
+17. Node modules:  This is the main library bundle  which stores the library files to support the project. 
+18. angular.json is the main configuration file of   angular project
+19.package .json : This the is file which contains dependecy information and project build syntax info.
+ctrl n for new folder alt + tab for all tab
+20- module - this is the logical wiring of functionalty anf method implimenation thatis commponents
+- commponents -  
+
+20 what happened when we run ng serve ?
+ans- when we run ng serve it loads angular.json.it will find where the index and main file. 
+-index.html is the first file which is loaded in angular, in index.html it loads the <app-root> tab selector  
+-As app root tab is not active angular loads the main.ts to activated the modules and the commponents
+-main.ts import the default module of angular and bootstrap the angular module  
+- now the control goes to appmodule.ts (typescript)
+
+ 	- in app module.ts it imports the app component.ts and bootstrips the components (bootstrap: [AppComponent])
+	we also need to declare the components 
+
+
+-import { Component } from '@angular/core';- this is the pre defined angular need to import ...
+-@Component({--- this the anotation , this is called as decorators and anotation we need to declaare the selector and template url information inside the conponents. 
+
+	---inside the components we have 3 attributes 
+				1- selector;app-root: this is yhe identification mark where index.html identifies the component
+				2-templateUri : this the html file location : if you want to display the html directly it will take template instead of template url.
+				3-styleUrls :this is the css file location 
+APP MODULE  is the default of the angular. each application  has one	app module.this are the logical grouping of the functionality that is compnent
+--ngIf;
+    this is premitive angular directive working on if else condition.
+    the syntax for ngIf in angular---- <div *ngIf="showMessageParam; then trueParam ;     else  otherParam     ">
+ 					 <!-- This is true param  cancel button message -->
+						</div>
+
+					<ng-template #trueParam>This is true param  cancel button message  </ng-template> 
+					<ng-template #otherParam>The message for false param cancel button  </ng-template> 
+	showMessageParam is the variable which template to be executed
+ngSwitch:
+   THIS  is another structural derictives.
+   it has 3 parts 1:ngSwitch
+                  2:ngSwitchCase
+                  3:ngSwitchDefault
+ngFor:
+*ngFor="let <value> of <collection>"
+ATTRIBUTE DIRECTIVE:
+	-ngStyle
+	-ngClass
+         
+
+	ngStyle:
+		we can pass dynamic values varaiables.
+		eg:
+		<div [ngStyle]="  'background-color':colourName,   'color':'red'   ">  This is my colour </div>
+	     
+
+
+
+
+ 
+
+
+
+
+
+
