@@ -8,6 +8,8 @@ import { AuthenticationModule } from './authentication/authentication.module';
 @NgModule({
   declarations: [
     AppComponent
+
+    
   ],
   imports: [
     BrowserModule,

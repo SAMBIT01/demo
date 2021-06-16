@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
     SignupComponent,
     FpasswordComponent,
     HeaderComponent
+   
   ],
   imports: [
     CommonModule
@@ -22,6 +23,6 @@ import { HeaderComponent } from './header/header.component';
     SignupComponent,
     FpasswordComponent,
     HeaderComponent
-  ],
+  ]
 })
 export class AuthenticationModule { }
