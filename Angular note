@@ -89,6 +89,15 @@ ATTRIBUTE DIRECTIVE:
 		we can pass dynamic values varaiables.
 		eg:
 		<div [ngStyle]="  'background-color':colourName,   'color':'red'   ">  This is my colour </div>
+Binding in angular:
+     1:Interpolation
+     2:property binding
+     3:attribute binding
+ PROPERTY BINDING:
+     The inbuilt property in html  are called html element.
+     The inbuilt property in javascript are called DOM.
+     some html element are present in dom element.
+ 
 	     
 
 

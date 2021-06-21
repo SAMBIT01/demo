@@ -12,6 +12,8 @@ ngOnInit(): void {
 showMessageParam = false;
 myName='Your name is:';
 myAddress='Your address is:'
+placeHolderVar='Enter your name'
+hrefVar="https://www.google.com/"
 students= [{rollNo: 1, name: 'Sambit'},
 {rollNo: 2, name: 'Avilipsa'},
 {rollNo: 3, name: 'Abhinav'}]
