@@ -97,8 +97,39 @@ Binding in angular:
      The inbuilt property in html  are called html element.
      The inbuilt property in javascript are called DOM.
      some html element are present in dom element.
- 
+
+event listerner in angular :
+	1:onclick
+	2:onmouseover
+	3;onfocus
+	4;onblur:when we exist from the focus( when we click the text box onfocus is called and opposite is unblur
+
+ Attribute binding:
+when we used html elements in dom elements that is not present in dom property then we used [attr.propertyname]
+<tr>
+            <td [attr.colspan]="2">total student: 3</td>
+          </tr>
+Pipes; 
+Angular 4 provides some built-in pipes. The pipes are listed below −
+
+	Lowercasepipe
+	EXAMPLE:
+	<b>{{title | uppercase}}</b><br/>
+    <b>{{title | lowercase}}</b>
+	Uppercasepipe
+	Datepipe
+	Currencypipe
+	
+	Jsonpipe
+	Percentpipe
+	Decimalpipe
+	Slicepipe
 	     
+	https://www.tutorialspoint.com/angular4/angular4_pipes.htm :FOLLOW THE LINK
+	
+TWO WAY DATA BINDING:
+Two-way data binding refers to sharing data between a component class and its template. If you change data in one place, it will automatically reflate at the other end. For example, if you change the value of the input box, then it will also update the value of the attached property in a component clas
+Built in pipe:
 
 
 

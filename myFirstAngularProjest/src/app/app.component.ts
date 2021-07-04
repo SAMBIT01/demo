@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myFirstAngularProjest';
+  myDate= Date.now();
+  users ={name:'Sambit',dist:'Nayagarh'};
+
+
 }

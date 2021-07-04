@@ -41,9 +41,10 @@
          text-align: center;
          margin: 24px 0 12px 0;
          }
-         img.avatar {
+         .testing {
          width: 40%;
          border-radius: 50%;
+         height: 100px;
          }
          .container {
          padding: 16px;
@@ -101,14 +102,16 @@
       </style>
    </head>
    <body style="background-color:grey;">
+      
+
       <h2 align="center">Login Form</h2>
       <form action="/action_page.php" method="post">
          <div class="imgcontainer">
-            <img src="" alt="Avatar" class="avatar">
+            <img src="././assets/image/testing.JPG" alt="image" class="testing">
          </div>
          <div class="container">
             <label for="uname"><b>Username</b></label>
-            <input type="text"  placeholder=" Enter Username" name="uname" required><br>
+            <input type="text"  placeholder=" Enter Username" name="uname" id="fname"    required><br>
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required><br>
            
@@ -117,12 +120,28 @@
             <label  >
             <input type="checkbox" checked="checked" name="remember">Remember me
             </label><br>
+            
             <input type="reset" value="Reset">
          </div>
          <div class="container" style="background-color:#f1f1f1">
             <input type="text" #titleInput /><br>
             <button type="button"  (click)="showMessage(titleInput.value )" class="cancelbtn">Cancel</button><br><br><br>
             <span class="psw">Forgot <a href="#">password?</a></span>
+            
+            
+            <div>
+               <h2>onblur example</h2>
+               <input type="text" (blur)="blurEvent($event)">
+               <div>
+                   Output is {{enteredEmail}}
+               </div>
+           </div>
+           <div (mouseover)= "mouseOverTesting()">
+              mouse over
+           </div>
+           <h1>Angular Textbox focus Event Example </h1>
+   
+            <input type="text" #placeVar (focus)="onFocusEvent()" />
          </div>
       </form>
       <!-- property binding -->
@@ -156,8 +175,46 @@
                {{sd.name}}
             </td>
          </tr>
+         <tr>
+            <td [attr.colspan]="2">total student: 3</td>
+          </tr>
       </table>
+      
+      <!-- <h1> {{ students | uppercase}}</h1> -->
+
       <div  [ngClass]="[classname1,classname2]" >=====================================data binding===============================</div>
       <div align="center">{{myName}}{{users.name}} {{myAddress}}{{users.dist}}</div>
+      <div  [ngClass]="[classname1,classname2]" >=====================================pipes===============================</div>
+      <h1> {{ "Welcome to Angular 4" | uppercase}}</h1>
+      <div>{{ money | currency:'INR':'symbol' }}</div>
+      <div>{{ money | currency:'USD':'symbol' }}</div>
+      <div>{{ money | currency:'JPY':'' }}円</div>
+      <p>{{ myDate | date }}</p>
+      <p>{{ decimal | number }}</p>
+      <p>{{ tar | percent }}</p>
+      <h1> {{ "Welcome to Angular 4" | lowercase}}</h1>
+      <div  [ngClass]="[classname1,classname2]" >=====================================parameterized pipes===============================</div>
+
+      <div> {{ myUsers.dob | date   }}</div>
+      <div> {{ myUsers.dob | date :'short' }}</div>
+      <div> {{ myUsers.dob | date :'long' }}</div>
+      <div> {{ myUsers.salary | currency  }}</div>
+      <div> {{ myUsers.salary | currency:'INR'  }}</div>
+      <div> {{ myUsers.salary | currency:'INR' :'INR':'3.0-0' }}</div>
+      <div> {{ myUsers.salary | currency : 'INR': 'code' }}</div>
+      <div  [ngClass]="[classname1,classname2]" >===================================== chaining pipes===============================</div>
+      <div> {{ myUsers.dob | date | uppercase }}</div>
+      <!-- <h3> chaining pipes takes multiple parameters</h3> -->
+      
+
+
+
+
+
+
+      <div  [ngClass]="[classname1,classname2]" >=====================================TWO WAY DATA BINDING===============================</div>
+      <input [(ngModel)] ="myMsg"/>  
+      <h1>{{ myMsg   }}</h1>
+
    </body>
 </html>
