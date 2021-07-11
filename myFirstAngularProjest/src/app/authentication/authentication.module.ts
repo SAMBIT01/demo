@@ -3,8 +3,11 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { FpasswordComponent } from './fpassword/fpassword.component';
-import { HeaderComponent } from './header/header.component';
+// import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
+// import { AppRoutingModule } from '././app-routing.module';
+
+
 
 
 
@@ -13,19 +16,21 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     LoginComponent,
     SignupComponent,
-    FpasswordComponent,
-    HeaderComponent
+    FpasswordComponent
+    // HeaderComponent
    
   ],
   imports: [
     CommonModule,
     FormsModule
+//  AppRoutingModule 
+
   ],
   exports:[
     LoginComponent,
     SignupComponent,
-    FpasswordComponent,
-    HeaderComponent
+    FpasswordComponent
+    // HeaderComponent
   ]
 })
 export class AuthenticationModule { }
